@@ -1,0 +1,21 @@
+{
+  "name": "parcel-plug-server",
+  "version": "0.1.0",
+  "module": "src/index.mjs",
+  "author": "Jacob Bare <jacob@limit0.io>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node_modules/.bin/gulp"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "gulp": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-eslint": "^5.0.0"
+  }
+}
