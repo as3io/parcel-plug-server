@@ -1,12 +1,16 @@
 const pkg = require('../package.json');
-const { PORT } = require('./env');
-const { app } = require('./express');
+const { PORT, HOSTNAME } = require('./env');
+const { app: express } = require('./express');
+const { connection: db } = require('./mongoose');
 
 const { log } = console;
 
 const run = async () => {
-  await app(PORT);
-  log(`Express app "${pkg.name}" listening on port ${PORT}`);
+  log(`Starting '${pkg.name}'...`);
+  const mongoose = await db;
+  log(`MongoDB connected to ${mongoose.client.s.url}`);
+  await express(PORT, HOSTNAME);
+  log(`> Ready on on http://${HOSTNAME}:${PORT}`);
 };
 
 run().catch(e => setImmediate(() => { throw e; }));
