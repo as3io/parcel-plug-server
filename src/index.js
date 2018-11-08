@@ -4,7 +4,9 @@ const { PORT } = require('./env');
 
 const { log } = console;
 
-const server = app.listen(PORT, () => {
+const run = async () => {
+  await app(PORT);
   log(`Express app "${pkg.name}" listening on port ${PORT}`);
-});
-server.on('error', (e => setImmediate(() => { throw e; })));
+};
+
+run().catch(e => setImmediate(() => { throw e; }));
