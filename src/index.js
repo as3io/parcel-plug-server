@@ -1,7 +1,7 @@
 const app = require('./app');
 const pkg = require('../package.json');
+const { PORT } = require('./env');
 
-const { PORT = 2112 } = process.env;
 const { log } = console;
 
 const server = app.listen(PORT, () => {
