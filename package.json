@@ -8,6 +8,7 @@
     "dev": "node_modules/.bin/gulp"
   },
   "dependencies": {
+    "envalid": "^4.1.4",
     "express": "^4.16.4"
   },
   "devDependencies": {
