@@ -24,5 +24,5 @@ const nonemptystr = makeValidator((v) => {
 module.exports = cleanEnv(process.env, {
   MONGO_DSN: mongodsn({ desc: 'The MongoDB DSN to connect to.' }),
   HOSTNAME: nonemptystr({ desc: 'The Express web server host name.', default: 'localhost' }),
-  PORT: port({ desc: 'The Express web server port.', default: 2218 }),
+  PORT: port({ desc: 'The Express web server port.', default: 2219 }),
 });
