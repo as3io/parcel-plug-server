@@ -10,7 +10,8 @@
   "dependencies": {
     "envalid": "^4.1.4",
     "express": "^4.16.4",
-    "mongoose": "^5.3.10"
+    "mongoose": "^5.3.10",
+    "validator": "^10.9.0"
   },
   "devDependencies": {
     "eslint": "^5.8.0",
