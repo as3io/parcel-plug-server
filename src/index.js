@@ -1,6 +1,6 @@
-const app = require('./app');
 const pkg = require('../package.json');
 const { PORT } = require('./env');
+const { app } = require('./express');
 
 const { log } = console;
 
